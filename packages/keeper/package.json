@@ -1,0 +1,16 @@
+{
+  "name": "@custos/keeper",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@custos/core": "*",
+    "@qorechain/sdk": "0.12.0",
+    "@qorechain/evm": "0.12.0",
+    "@cosmjs/stargate": "^0.39.0",
+    "viem": "^2.40.0"
+  }
+}
