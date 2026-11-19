@@ -1,0 +1,19 @@
+{
+  "name": "@custos/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@custos/core": "*",
+    "@custos/keeper": "*",
+    "@custos/brain": "*",
+    "@qorechain/sdk": "0.12.0",
+    "@qorechain/qoresign": "0.1.1",
+    "@cosmjs/stargate": "^0.39.0",
+    "cosmjs-types": "^0.11.0",
+    "viem": "^2.40.0"
+  }
+}
