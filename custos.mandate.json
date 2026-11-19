@@ -1,0 +1,26 @@
+{
+  "$comment": "The owner's intended mandate. `npm run setup:testnet` writes it on-chain with owner ML-DSA-87 signatures; the Brain uses it as its vendor directory. Amounts are in whole fUSD (6 decimals). These vendor addresses are demo addresses: replace them with your own before paying real people.",
+  "token": "fUSD",
+  "perTxCap": "500",
+  "dailyCap": "1000",
+  "payees": [
+    {
+      "name": "Nimbus Hosting",
+      "address": "0x0Ba4629a70fa8BA79fA80f705ba9cA4A1AA4AB23",
+      "cap": "400",
+      "aliases": ["Nimbus Cloud", "nimbus-hosting.example"]
+    },
+    {
+      "name": "Lumen Design Studio",
+      "address": "0x57cF10f218c2bcD8728BFA400dA32665fcfa2Bd4",
+      "cap": "400",
+      "aliases": ["Lumen Design", "lumen.example"]
+    },
+    {
+      "name": "Orbit Payroll",
+      "address": "0x959eE8566817e566f3906224Fa51304bF27c99E1",
+      "cap": "300",
+      "aliases": ["Orbit", "orbit-payroll.example"]
+    }
+  ]
+}

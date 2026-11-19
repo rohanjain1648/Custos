@@ -1,0 +1,40 @@
+{
+  "name": "custos",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Custos: an AI accounts-payable agent on QoreChain whose classical keys can only push money toward a vault. Only an ML-DSA-87 signature, checked on-chain with pqcVerify, moves money out.",
+  "license": "MIT",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:contracts": "cd contracts && forge test -vv",
+    "test:all": "npm run test:contracts && npm test",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build:contracts": "cd contracts && forge build",
+    "abi": "tsx --import ./scripts/preload.mjs packages/core/scripts/export-abi.ts",
+    "vectors": "tsx --import ./scripts/preload.mjs packages/core/scripts/write-vectors.ts",
+    "live-check": "tsx --import ./scripts/preload.mjs packages/cli/src/live-check.ts",
+    "keys": "tsx --import ./scripts/preload.mjs packages/cli/src/keys.ts",
+    "setup:testnet": "tsx --import ./scripts/preload.mjs packages/cli/src/setup.ts",
+    "status": "tsx --import ./scripts/preload.mjs packages/cli/src/status.ts",
+    "owner": "tsx --import ./scripts/preload.mjs packages/cli/src/owner.ts",
+    "attack": "tsx --import ./scripts/preload.mjs packages/cli/src/attack.ts",
+    "keeper": "tsx --import ./scripts/preload.mjs packages/keeper/src/main.ts",
+    "brain": "tsx --import ./scripts/preload.mjs packages/brain/src/main.ts",
+    "sentinel": "tsx --import ./scripts/preload.mjs packages/sentinel/src/main.ts",
+    "console": "npm run dev -w @custos/console",
+    "build:console": "npm run build -w @custos/console"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "tsx": "^4.20.0",
+    "vitest": "^3.2.0",
+    "@types/node": "^22.15.0"
+  }
+}
